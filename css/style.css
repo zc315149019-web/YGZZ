@@ -1,0 +1,256 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000;
+    background-color: #fff;
+}
+
+/* 导航栏样式 */
+.navbar {
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-nav {
+    gap: 30px;
+}
+
+.nav-link {
+    color: #000 !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #666 !important;
+}
+
+.navbar-right {
+    margin-left: 30px;
+}
+
+/* 横幅区域样式 */
+.hero-section {
+    height: 100vh;
+    background-image: url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20minimalist%20architecture%20building%20exterior%20with%20curved%20concrete%20walls&image_size=landscape_16_9');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* 商业空间展示样式 */
+.commercial-section {
+    padding: 100px 0;
+}
+
+.commercial-section h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.commercial-image {
+    margin-bottom: 20px;
+}
+
+.commercial-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.commercial-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.commercial-info span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.arrow-link {
+    font-size: 1.5rem;
+    color: #000;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.arrow-link:hover {
+    transform: translateX(10px);
+}
+
+/* 案例展示样式 */
+.cases-section {
+    padding: 100px 0;
+}
+
+.cases-section h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.case-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.case-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.case-item:hover img {
+    transform: scale(1.05);
+}
+
+.case-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.case-overlay h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.case-overlay p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* 关于我们样式 */
+.about-section {
+    padding: 100px 0;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-image {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-text {
+    max-width: 800px;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* 页脚样式 */
+.footer {
+    padding: 50px 0;
+    background-color: #f8f9fa;
+    margin-top: 100px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .commercial-section h2,
+    .cases-section h2,
+    .about-section h2 {
+        font-size: 2rem;
+    }
+    
+    .navbar-nav {
+        gap: 15px;
+    }
+    
+    .navbar-right {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .commercial-section h2,
+    .cases-section h2,
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .commercial-section,
+    .cases-section,
+    .about-section {
+        padding: 60px 0;
+    }
+}
